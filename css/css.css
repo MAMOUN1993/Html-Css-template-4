@@ -22,17 +22,25 @@ a{
 ul {
     list-style-type: none;
 }
+.container{
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+
 .page {
     display: flex;
+    background-color: #f1f5f9;
 }
 .page .side-bar {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    width: 250px;
+    width: 225px;
     gap: 20px;
-    box-shadow: 0px 0px 5px 0px var(--hover-color);
     height: 100vh;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #ddd;
+    z-index: 2;
 }
 .page .side-bar h2 {
     position: relative;
@@ -126,4 +134,58 @@ ul {
     .page .side-bar h2::after{
         display: none;
     }
+}
+.page section{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.page section header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    min-height: 68px;
+}
+.page section header .search {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 10px;
+}
+.page section header .search i {
+    font-size: 14px;
+    color: gray;
+}
+.page section header .search input[type=search]{
+    border: none;
+    font-size: 13px;
+    width: 125px;
+    transition-duration: var(--trans-time);
+    text-transform: capitalize;
+}
+.page section header .search input[type=search]:focus {
+    width: 160px;
+}
+.page section header img {
+    width: 32px;
+}
+.page section header .alram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.page section header .alram i {
+    font-size: 20px;
+    position: relative;
+}
+.page section header .alram i::after{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    top: -30%;
+    right: -30%;
+    border-radius: 50%;
 }
